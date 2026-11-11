@@ -1,0 +1,16 @@
+dockerfile code:
+FROM httpd:latest
+COPY index.html \usr\local\apache2\htdocs\
+
+Terminal:
+docker build -t resume2:1.1 .
+docker run -d --name container10 -p 9090:80 resume2:1.1
+docker tag imageid username/resume2:latest
+docker push username/resume2:latest
+  
+browse:http://localhost:90090
+
+To get someones image:
+
+docker pull theirusername/resumename
+docker -d -p their port no/theirusername/resumename
